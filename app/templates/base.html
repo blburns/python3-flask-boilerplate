@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--begin::Head-->
+<head>
+    {% include 'layout/main-meta.html' %}
+</head>
+<!--end::Head-->
+<!--begin::Body-->
+<body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
+    <!--begin::App Wrapper-->
+    <div class="app-wrapper">
+        {% include 'layout/main-navbar.html' %}
+        {% include 'layout/main-sidebar.html' %}
+
+        {% block content %}
+        {% endblock %}
+
+        {% include 'layout/main-footer.html' %}
+    </div>
+    <!--end::App Wrapper-->
+    {% include 'layout/main-scripts.html' %}
+
+    <!--begin::custom_javascript_bottom-->
+    {% block custom_javascript_bottom %}
+    {% endblock %}
+    <!--end::custom_javascript_bottom-->
+</body>
+<!--end::Body-->
+</html>

@@ -1,0 +1,24 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{{ APP_NAME }}</title>
+    <!--begin::Primary Meta Tags-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="{% block title %} {% endblock %}">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!--end::Primary Meta Tags-->
+    {% include 'layout/meta/fonts.html' %}
+    {% include 'layout/meta/overlay_scrollbars.html' %}
+    {% include 'layout/meta/bootstrap.html' %}
+    {% include 'layout/meta/adminlte.html' %}
+    {% include 'layout/meta/jquery.html' %}
+    {# include 'layout/meta/library.html' #}
+    {# include 'layout/meta/semantic.html' #}
+    {# include 'layout/meta/simplemde.html' #}
+    {# include 'layout/meta/calendar.html' #}
+    {% block custom_meta %}
+    {% endblock %}
+    {% block custom_style %}
+    {% endblock %}
+    {% block custom_javascript %}
+    {% endblock %}

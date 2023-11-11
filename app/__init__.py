@@ -1,6 +1,6 @@
 from flask import Flask
-from flask_debugtoolbar import DebugToolbarExtension
 from config import Config
+# from flask_debugtoolbar import DebugToolbarExtension
 
 
 def create_app():
@@ -10,6 +10,10 @@ def create_app():
 
     """Load configs"""
     app.config.from_object("config.Config")
+
+    """Register Blueprints"""
+    from app.main import bp as main_bp
+    app.register_blueprint(main_bp)
 
     """Test the Flask Application Factory"""
     @app.route('/test/')
