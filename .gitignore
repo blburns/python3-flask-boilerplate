@@ -1,0 +1,14 @@
+venv
+__ARCHIVE__
+__pycache__
+.idea
+src
+
+/nohup.out
+/project
+/application
+
+/app/data/cache/*
+/app/data/logs/*
+/app/data/sessions/*
+/flask_session
