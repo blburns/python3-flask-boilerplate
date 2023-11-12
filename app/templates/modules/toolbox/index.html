@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% set active_module = 'toolbox' %}
+
+{% block content %}
+        <!--begin::App Main-->
+        <main class="app-main">
+            <!--begin::App Content Header-->
+            <div class="app-content-header">
+                <!--begin::Container-->
+                <div class="container-fluid">
+                    <!--begin::Row-->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h3 class="mb-0">Network Toolbox</h3>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-end">
+                                <li class="breadcrumb-item"><a href="#"><i class="bi bi-home"></i>Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    Toolbox
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <!--end::Row-->
+                </div>
+                <!--end::Container-->
+            </div>
+            <div class="app-content"><!--begin::Container-->
+                <div class="container-fluid">
+                    <!--
+                    <div class="row">
+                        <div class="col-md-6 text-left">
+                            {# include 'modules/toolbox/partials/some-button.html' #}
+                        </div>
+                        <div class="col-md-6 float-end">
+                            <div class="float-end">
+
+                            </div>
+                            <div class="float-end" style="padding-right: 5px;">
+                                <input type="filter" class="form-control ds-input" placeholder="Filter" />
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card card-secondary card-outline mb-4">
+                                <!--begin::card-header-->
+                                <div class="card-header">
+                                    <h3 class="card-title">Toolbox</h3>
+                                </div>
+                                <!--end::card-header-->
+                                <div class="card-body">
+                                    {% include 'modules/toolbox/tabs/tabs-toolbox.html' %}
+
+                                </div><!-- /.card-body -->
+                                <div class="card-footer clearfix"></div>
+                            </div><!-- /.card -->
+
+                    </div>
+                </div>
+                <!--end::Container-->
+            </div>
+            <!--end::App Content-->
+        </main>
+        <!--end::App Main-->
+{% endblock %}
+{% block custom_javascript_bottom %}
+<script>
+    $('.tabular.menu .item').tab();
+    $('.toggle.checkbox').checkbox('attach events', '.toggle.button');
+    $('.btn-group').on('click', '.btn', function() {$(this).addClass('active').siblings().removeClass('active');});
+    $('.ui.selection .ui.dropdown').dropdown();
+    $('.ui.search ').dropdown();
+    $('.ui.fluid').dropdown();
+</script>
+{% endblock %}
