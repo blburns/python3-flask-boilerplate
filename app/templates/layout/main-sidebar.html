@@ -1,11 +1,10 @@
 {% set aside_navigation = [
-    ('/',                       'dashboard',            'Dashboard',            'bi-house-door'),
-    ('/module_name',            'module_name',          'Module Name',          'bi-code'),
+    ('/',                       'main',                 'Home',                 'bi-house-door'),
+    ('/dashboard',              'dashboard',            'Dashboard',            'bi-speedometer'),
+    ('/pages',                  'pages',                'Static Pages',         'bi-file-earmark-code'),
     ('/reports',                'reports',              'Reports',              'bi-bar-chart'),
     ('/settings',               'settings',             'Settings',             'bi-gear'),
 ] -%}
-
-
         <!--begin::Sidebar-->
         <aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
             <!--begin::Sidebar Brand-->
@@ -29,7 +28,7 @@
                     <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu" data-accordion="false">
                         {% for href, id, caption, icon in aside_navigation %}
                         <li class="nav-item">
-                            <a href="{{ href|e }}" class="nav-link {% if id == active_page %}active{% endif %}">
+                            <a href="{{ href|e }}" class="nav-link {% if id == active_module %}active{% endif %}">
                                 <i class="nav-icon bi {{ icon|e }}"></i>
                                 <p>{{ caption|e }}</p>
                             </a>
