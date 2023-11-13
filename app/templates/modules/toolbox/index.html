@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% set active_module = 'toolbox' %}
+{% set page_title = 'Network Toolbox' %}
 
 {% block content %}
         <!--begin::App Main-->
@@ -17,7 +18,7 @@
                             <ol class="breadcrumb float-sm-end">
                                 <li class="breadcrumb-item"><a href="#"><i class="bi bi-home"></i>Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">
-                                    Toolbox
+                                    {{ page_title }}
                                 </li>
                             </ol>
                         </div>
@@ -26,40 +27,36 @@
                 </div>
                 <!--end::Container-->
             </div>
-            <div class="app-content"><!--begin::Container-->
+            <!--end::App Content Header-->
+            <!--begin::App Content-->
+            <div class="app-content">
+                <!--begin::Container-->
                 <div class="container-fluid">
-                    <!--
+                    <!--begin::row-->
                     <div class="row">
-                        <div class="col-md-6 text-left">
-                            {# include 'modules/toolbox/partials/some-button.html' #}
-                        </div>
-                        <div class="col-md-6 float-end">
-                            <div class="float-end">
-
-                            </div>
-                            <div class="float-end" style="padding-right: 5px;">
-                                <input type="filter" class="form-control ds-input" placeholder="Filter" />
-                            </div>
-                        </div>
-                    </div>
-                    <br />
-                    -->
-                    <div class="row">
+                        <!--begin::column-->
                         <div class="col-md-12">
+                            <!--begin::card-->
                             <div class="card card-secondary card-outline mb-4">
                                 <!--begin::card-header-->
                                 <div class="card-header">
-                                    <h3 class="card-title">Toolbox</h3>
+                                    <h3 class="card-title">{{ page_title }}</h3>
                                 </div>
                                 <!--end::card-header-->
+                                <!--begin::card-body-->
                                 <div class="card-body">
                                     {% include 'modules/toolbox/tabs/tabs-toolbox.html' %}
-
-                                </div><!-- /.card-body -->
+                                </div>
+                                <!--end::card-body-->
+                                <!--begin::card-footer-->
                                 <div class="card-footer clearfix"></div>
-                            </div><!-- /.card -->
-
+                                <!--end::card-footer-->
+                            </div>
+                            <!--end::card-->
+                        </div>
+                        <!--end::column-->
                     </div>
+                    <!--end::row-->
                 </div>
                 <!--end::Container-->
             </div>

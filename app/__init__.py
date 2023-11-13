@@ -19,7 +19,7 @@ def create_app():
 
     # >>> pages_bp
     from app.pages import bp as pages_bp
-    app.register_blueprint(pages_bp, url_prefix='/sections')
+    app.register_blueprint(pages_bp, url_prefix='/pages')
 
     # >>> settings_bp
     from app.settings import bp as settings_bp

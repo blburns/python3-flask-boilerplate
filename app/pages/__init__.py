@@ -1,5 +1,5 @@
 from flask import Blueprint
 
-bp = Blueprint('sections', __name__)
+bp = Blueprint('pages', __name__)
 
 from app.pages import routes
