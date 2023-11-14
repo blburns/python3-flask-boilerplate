@@ -2,6 +2,7 @@ venv
 __ARCHIVE__
 __pycache__
 .idea
+.DS_Store
 /node_modules/
 
 *.zip
