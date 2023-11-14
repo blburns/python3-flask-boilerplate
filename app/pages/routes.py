@@ -4,4 +4,4 @@ from app.pages import bp
 
 @bp.route('/')
 def index():
-    return render_template('modules/pages/index.html')
+    return render_template('modules/sections/index.html')

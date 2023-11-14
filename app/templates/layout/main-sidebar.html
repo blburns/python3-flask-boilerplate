@@ -1,22 +1,11 @@
-{# set aside_navigation = [
-    ('/dashboard',              'dashboard',            'Dashboard',            'bi-house-door'),
-    ('/toolbox',                'toolbox',              'Network Toolbox',      'bi-code'),
-] -#}
 {% set aside_navigation = [
-    ('/dashboard',              'dashboard',            'Dashboard',            'bi-house-door'),
+    ('/',                       'main',                 'Home',                 'bi-house-door'),
+    ('/dashboard',              'dashboard',            'Dashboard',            'bi-speedometer'),
     ('/toolbox',                'toolbox',              'Network Toolbox',      'bi-code'),
     ('/pages',                  'pages',                'Static Pages',         'bi-file-earmark-code'),
     ('/reports',                'reports',              'Reports',              'bi-bar-chart'),
     ('/settings',               'settings',             'Settings',             'bi-gear'),
 ] -%}
-<!-- # href, id, caption, icon-->
-{% set aside_navigation_toolbox = [
-    ('/toolbox/all-tools',  'all_tools',    'All Tools',    'bi-circle'),
-    ('/toolbox/email',      'email',        'Email',        'bi-circle'),
-    ('/toolbox/network',    'network',      'Network',      'bi-circle'),
-    ('/toolbox/website',    'website',      'Website',      'bi-circle'),
-] -%}
-
         <!--begin::Sidebar-->
         <aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
             <!--begin::Sidebar Brand-->
@@ -24,7 +13,7 @@
                 <!--begin::Brand Link-->
                 <a href="/" class="brand-link">
                     <!--begin::Brand Image-->
-<!--                    <img src="/static/assets/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image opacity-75 shadow"><span class="brand-text fw-light" style="margin-left: 5px;">pp Name</span>-->
+                    <img src="/static/assets/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image opacity-75 shadow"><span class="brand-text fw-light" style="margin-left: 9px;">pp Name</span>
                     <!--end::Brand Image-->
                     <!--begin::Brand Text-->
                     <span class="brand-text fw-light">{{ APP_NAME }}</span>
@@ -37,37 +26,14 @@
             <div class="sidebar-wrapper">
                 <nav class="mt-2">
                     <!--begin::Sidebar Menu-->
-                    <ul class="nav nav-sidebar nav-child-indent  sidebar-menu flex-column" data-lte-toggle="treeview" role="menu" data-accordion="false">
+                    <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu" data-accordion="false">
                         {% for href, id, caption, icon in aside_navigation %}
-                            {% if id == 'toolbox' %}
-                            <li class="nav-item {% if active_module == id %}menu-open{% endif %}">
-                                <a href="#" class="nav-link ">
-                                    <i class="nav-icon bi {{ icon|e }}"></i>
-                                    <p>
-                                        {{ caption|e }}
-                                        <i class="nav-arrow bi bi-chevron-right"></i>
-                                    </p>
-                                </a>
-                                <ul class="nav nav-treeview">
-                                    {% for href, id, caption, icon in aside_navigation_toolbox %}
-                                    <li class="nav-item">
-                                        <a href="{{ href|e }}" class="nav-link {% if active_page == id %}active{% endif %}">
-                                            <i class="nav-icon bi {{ icon|e }}"></i>
-                                            <p>{{ caption|e }}</p>
-                                        </a>
-                                    </li>
-                                    {% endfor %}
-                                </ul>
-                            </li>
-                            {% else %}
-                            <li class="nav-item">
-                                <a href="{{ href|e }}" class="nav-link">
-                                    <i class="nav-icon bi {{ icon|e }}"></i>
-                                    <p>{{ caption|e }}</p>
-                                </a>
-                            </li>
-                            {% endif %}
-
+                        <li class="nav-item">
+                            <a href="{{ href|e }}" class="nav-link {% if id == active_module %}active{% endif %}">
+                                <i class="nav-icon bi {{ icon|e }}"></i>
+                                <p>{{ caption|e }}</p>
+                            </a>
+                        </li>
                         {% endfor %}
                     </ul>
                     <!--end::Sidebar Menu-->

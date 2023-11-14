@@ -7,21 +7,18 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <!--end::Primary Meta Tags-->
-    {% include 'layout/meta/fontsource.html' %}
+    {% include 'layout/meta/fonts.html' %}
     {% include 'layout/meta/overlay_scrollbars.html' %}
     {% include 'layout/meta/bootstrap.html' %}
     {% include 'layout/meta/adminlte.html' %}
     {% include 'layout/meta/jquery.html' %}
     {% include 'layout/meta/library.html' %}
     {% include 'layout/meta/semantic.html' %}
-    {# include 'layout/meta/simplemde.html' #}
-    {# include 'layout/meta/calendar.html' #}
-    <!--begin::custom_meta-->
-    {% block custom_meta %}{% endblock %}
-    <!--end::custom_meta-->
-    <!--begin::custom_style-->
-    {% block custom_style %}{% endblock %}
-    <!--end::custom_style-->
-    <!--begin::custom_javascript-->
-    {% block custom_javascript %}{% endblock %}
-    <!--end::custom_javascript-->
+    {% include 'layout/meta/simplemde.html' %}
+    {% include 'layout/meta/calendar.html' %}
+    {% block custom_meta %}
+    {% endblock %}
+    {% block custom_style %}
+    {% endblock %}
+    {% block custom_javascript %}
+    {% endblock %}
