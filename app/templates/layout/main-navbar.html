@@ -9,7 +9,7 @@
         <nav class="app-header navbar navbar-expand bg-body">
             <!--begin::Container-->
             <div class="container-fluid">
-                <!--begin::Start Navbar Links-->
+                <!--begin::navbar-links (left)-->
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" data-lte-toggle="sidebar" href="#" role="button">
@@ -20,11 +20,14 @@
 <!--                        <a href="/" class="nav-link">Home</a>-->
                     </li>
                 </ul>
-                <!--end::Start Navbar Links-->
-                <!--begin::End Navbar Links-->
+                <!--end::navbar-links (left)-->
+                <!--begin::navbar-links (right)-->
                 <ul class="navbar-nav ms-auto">
+                    {# include 'layout/partials/navbar/navbar-search.html' #}
+                    {% include 'layout/partials/navbar/fullscreen-toggle.html' %}
+                    {# include 'layout/partials/navbar/user-menu-dropdown.html' #}
                 </ul>
-                <!--end::End Navbar Links-->
+                <!--end::navbar-links (right)-->
             </div>
             <!--end::Container-->
         </nav>
