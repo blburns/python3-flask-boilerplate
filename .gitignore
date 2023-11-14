@@ -12,7 +12,7 @@ __pycache__
 /nohup.out
 /project
 /application
-/src
+/vendors
 /app/data/cache/*
 /app/data/logs/*
 /app/data/sessions/*

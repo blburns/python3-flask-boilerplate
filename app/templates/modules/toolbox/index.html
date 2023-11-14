@@ -68,12 +68,12 @@
         <!--end::App Main-->
 {% endblock %}
 {% block custom_javascript_bottom %}
-<script>
-    $('.tabular.menu .item').tab();
-    $('.toggle.checkbox').checkbox('attach events', '.toggle.button');
-    $('.btn-group').on('click', '.btn', function() {$(this).addClass('active').siblings().removeClass('active');});
-    $('.ui.selection .ui.dropdown').dropdown();
-    $('.ui.search ').dropdown();
-    $('.ui.fluid').dropdown();
-</script>
+    <script>
+        $('.tabular.menu .item').tab();
+        $('.toggle.checkbox').checkbox('attach events', '.toggle.button');
+        $('.btn-group').on('click', '.btn', function() {$(this).addClass('active').siblings().removeClass('active');});
+        $('.ui.selection .ui.dropdown').dropdown();
+        $('.ui.search ').dropdown();
+        $('.ui.fluid').dropdown();
+    </script>
 {% endblock %}

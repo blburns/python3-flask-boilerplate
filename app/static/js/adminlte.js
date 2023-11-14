@@ -243,7 +243,7 @@
         const sidebarOverlay = document.createElement('div');
         sidebarOverlay.className = CLASS_NAME_SIDEBAR_OVERLAY;
         (_a = document.querySelector(SELECTOR_APP_WRAPPER)) === null || _a === void 0 ? void 0 : _a.append(sidebarOverlay);
-        sidebarOverlay.addEventListener('touchstart', event => {
+        sidebarOverlay.addEventListener('passive', event => {
             event.preventDefault();
             const target = event.currentTarget;
             const data = new PushMenu(target, Defaults);
