@@ -2,7 +2,7 @@ venv
 __ARCHIVE__
 __pycache__
 .idea
-
+/node_modules/
 
 *.zip
 *.tar.gz
