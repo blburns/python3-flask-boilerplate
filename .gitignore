@@ -2,12 +2,17 @@ venv
 __ARCHIVE__
 __pycache__
 .idea
-src
+
+
+*.zip
+*.tar.gz
+*.tgz
+
 
 /nohup.out
 /project
 /application
-
+/src
 /app/data/cache/*
 /app/data/logs/*
 /app/data/sessions/*
