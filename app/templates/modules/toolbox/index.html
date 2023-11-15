@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 {% set active_module = 'toolbox' %}
+{% set load_simplemde = 'true' %}
+{% set load_apexcharts = 'true' %}
+{% set load_calendar = 'true' %}
 
 {% block content %}
         <!--begin::App Main-->
@@ -26,7 +29,10 @@
                 </div>
                 <!--end::Container-->
             </div>
-            <div class="app-content"><!--begin::Container-->
+            <!--end::App Content Header-->
+            <!--begin::App Content Body-->
+            <div class="app-content">
+                <!--begin::Container-->
                 <div class="container-fluid">
                     <!--
                     <div class="row">
@@ -44,8 +50,11 @@
                     </div>
                     <br />
                     -->
+                    <!--begin::row-->
                     <div class="row">
+                        <!--begin::column-->
                         <div class="col-md-12">
+                            <!--begin::card-->
                             <div class="card card-secondary card-outline mb-4">
                                 <!--begin::card-header-->
                                 <div class="card-header">
@@ -57,17 +66,21 @@
 
                                 </div><!-- /.card-body -->
                                 <div class="card-footer clearfix"></div>
-                            </div><!-- /.card -->
-
+                            </div>
+                            <!--end::card-->
+                        </div>
+                        <!--end::column-->
                     </div>
+                    <!--end::row-->
                 </div>
                 <!--end::Container-->
             </div>
-            <!--end::App Content-->
+            <!--end::App Content Body-->
         </main>
         <!--end::App Main-->
 {% endblock %}
 {% block custom_javascript_bottom %}
+    <!--begin::custom_javascript_bottom-->
     <script>
         $('.tabular.menu .item').tab();
         $('.toggle.checkbox').checkbox('attach events', '.toggle.button');
@@ -76,4 +89,5 @@
         $('.ui.search ').dropdown();
         $('.ui.fluid').dropdown();
     </script>
+    <!--end::custom_javascript_bottom-->
 {% endblock %}

@@ -13,13 +13,13 @@
     {% include 'layout/meta/bootstrap-icons.html' %}
     {% include 'layout/meta/adminlte.html' %}
     {% include 'layout/meta/jquery.html' %}
-    {% include 'layout/meta/library.html' %}
     {% include 'layout/meta/semantic.html' %}
-    {% include 'layout/meta/simplemde.html' %}
-    {% include 'layout/meta/calendar.html' %}
-    {% block custom_meta %}
-    {% endblock %}
-    {% block custom_style %}
-    {% endblock %}
-    {% block custom_javascript %}
-    {% endblock %}
+    <!--begin::Third Party Plugins-->
+    {% if load_apexcharts == 'true' %}{% include 'layout/meta/apexcharts.html' %}{% endif %}
+    {% if load_calendar == 'true' %}{% include 'layout/meta/calendar.html' %}{% endif %}
+    {% if load_simplemde == 'true' %}{% include 'layout/meta/simplemde.html' %}{% endif %}
+    {% if load_ckeditor == 'true' %}{% include 'layout/meta/ckeditor.html' %}{% endif %}
+    <!--end::Third Party Plugins-->
+    {% block custom_meta %}{% endblock %}
+    {% block custom_style %}{% endblock %}
+    {% block custom_javascript %}{% endblock %}

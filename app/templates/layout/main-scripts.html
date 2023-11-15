@@ -4,6 +4,10 @@
     {% include 'layout/scripts/popperjs.html' %}
     {% include 'layout/scripts/bootstrap.html' %}
     {% include 'layout/scripts/adminlte.html' %}
+    {% include 'layout/scripts/library.html' %}
+    {% include 'layout/scripts/semantic.html' %}
     <!-- OPTIONAL SCRIPTS -->
-
+    {% if load_simplemde == 'true' %}{% include 'layout/scripts/simplemde.html' %}{% endif %}
+    {% if load_apexcharts == 'true' %}{% include 'layout/scripts/apexcharts.html' %}{% endif %}
+    {% if load_ckeditor == 'true' %}{% include 'layout/scripts/ckeditor.html' %}{% endif %}
     <!--end::Scripts-->
