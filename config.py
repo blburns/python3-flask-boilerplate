@@ -13,6 +13,7 @@ class Config:
 
     # General Config
     ENVIRONMENT = environ.get("ENVIRONMENT")
+    APP_NAME = environ.get("APP_NAME")          # This is for template variable: {{ APP_NAME }}
 
     # Flask Config
     FLASK_APP = environ.get('FLASK_APP')
