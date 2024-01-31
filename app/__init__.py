@@ -18,23 +18,23 @@ def create_app():
     app.register_blueprint(main_bp)
 
     # >>> pages_bp
-    from app.pages import bp as pages_bp
+    from app.modules.pages import bp as pages_bp
     app.register_blueprint(pages_bp, url_prefix='/sections')
 
     # >>> settings_bp
-    from app.settings import bp as settings_bp
+    from app.modules.settings import bp as settings_bp
     app.register_blueprint(settings_bp, url_prefix='/settings')
 
     # >>> reports_bp
-    from app.reports import bp as reports_bp
+    from app.modules.reports import bp as reports_bp
     app.register_blueprint(reports_bp, url_prefix='/reports')
 
     # >>> dashboard_bp
-    from app.dashboard import bp as dashboard_bp
+    from app.modules.dashboard import bp as dashboard_bp
     app.register_blueprint(dashboard_bp, url_prefix='/dashboard')
 
     # >>> toolbox_bp
-    from app.toolbox import bp as toolbox_bp
+    from app.modules.toolbox import bp as toolbox_bp
     app.register_blueprint(toolbox_bp, url_prefix='/toolbox')
 
     """Test the Flask Application Factory"""

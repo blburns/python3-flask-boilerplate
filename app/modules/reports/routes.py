@@ -1,5 +1,5 @@
 from flask import render_template
-from app.reports import bp
+from app.modules.reports import bp
 
 
 @bp.route('/')

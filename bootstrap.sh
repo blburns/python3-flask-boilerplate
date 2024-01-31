@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 function run() {(
-    source venv/bin/activate ;
+#    source venv/bin/activate ;
     flask run ;
 )}
 
