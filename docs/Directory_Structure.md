@@ -1,5 +1,6 @@
 # Directory Structure
 
+
 ```commandline
 [Project Directory]
 +-- app/
@@ -21,30 +22,49 @@
 |   |
 |   +-- console/
 |   +-- data/
+|   |   +-- backups/
+|   |   +-- cache/
 |   |   +-- db/
-|   |   |   +-- backups/
-|   |   |   +-- seeds/
-|   |   |   |   +-- seed_admins.csv
-|   |   |   |   +-- seed_users.csv
-|   |   |   |   +-- seed_module_1_data.csv
-|   |   |   |   +-- seed_module_2_data.csv
-|   |   |   |
 |   |   |   +-- admins.db
-|   |   |   +-- app.db
 |   |   |   +-- users.db
 |   |   |   +-- sessions.db
+|   |   |   +-- app.db
 |   |   |
-|   |   +-- sessions/
 |   |   +-- logs/
-|   |       +-- archive/
-|   |       +-- access.log
-|   |       +-- error.log
-|   |       +-- console.log
+|   |   |   +-- archive/
+|   |   |   +-- access.log
+|   |   |   +-- error.log
+|   |   |   +-- console.log
+|   |   |
+|   |   +-- seeds/
+|   |   |   +-- seed_admins.csv
+|   |   |   +-- seed_users.csv
+|   |   |   +-- seed_module_1_data.csv
+|   |   |   +-- seed_module_2_data.csv
+|   |   |   
+|   |   +-- sessions/
 |   |
 |   +-- models/
-|   |   +-- main/
-|   |       +-- __init__.py
-|   |       +-- routes.py
+|   |   +-- admins.py
+|   |   +-- users.py
+|   |   +-- module_1_table.py
+|   |   +-- moudle_2_table.py
+|   |
+|   +-- modules/
+|   |       +-- main/
+|   |       |   +-- __init__.py
+|   |       |   +-- api.py
+|   |       |   +-- routes.py
+|   |       |
+|   |       +-- module_1/
+|   |       |   +-- __init__.py
+|   |       |   +-- api.py
+|   |       |   +-- routes.py
+|   |       |
+|   |       +-- module_2/
+|   |           +-- __init__.py
+|   |           +-- api.py
+|   |           +-- routes.py
 |   |
 |   +-- static/
 |   |   +-- assets/
