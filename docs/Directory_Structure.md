@@ -77,6 +77,12 @@
 |   |   +-- module_1/
 |   |   |   +-- static/
 |   |   |   +-- templates/
+|   |   |       +-- layout/
+|   |   |           +-- elements
+|   |   |               +-- cards
+|   |   |               +-- forms
+|   |   |               +-- mod
+|   |   |   
 |   |   |
 |   |   +-- module_2/
 |   |   |   +-- static/

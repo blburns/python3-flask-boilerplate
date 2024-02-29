@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
-function run() {(
-#    source venv/bin/activate ;
-    flask run ;
-)}
+source venv/bin/activate ;
+
+function run() {
+  ( flask run ; )
+}
 
 function init() {
   run
