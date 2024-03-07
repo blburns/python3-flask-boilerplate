@@ -1,5 +1,9 @@
 # Python3 Flask Boilerplate
 
+
+This project is a work in progress.
+
+
 ```commandline
 # >>> Install Python Virtual Environemnt (venv)
 python -m venv venv
